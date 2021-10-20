@@ -8,7 +8,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text(
-          "Hello, World!",
+          "Widgets básicos",
         ),
         centerTitle: true,
       ),
@@ -20,16 +20,16 @@ class HomePage extends StatelessWidget {
     return Container(
       color: Colors.white,
       child: Center(
-        child: _text(),
+        child: _imgAss(),
       ),
     );
   }
 
   _text() {
     return const Text(
-      "Hello, World!",
+      "Widgets básicos em Flutter!",
       style: TextStyle(
-        fontSize: 30,
+        fontSize: 20,
         color: Colors.blue,
         fontWeight: FontWeight.bold,
         fontStyle: FontStyle.italic,
@@ -37,6 +37,20 @@ class HomePage extends StatelessWidget {
         decorationColor: Colors.red,
         decorationStyle: TextDecorationStyle.wavy,
       ),
+    );
+  }
+
+  _imgNet() {
+    return Image.network(
+        "https://criticalhits.com.br/wp-content/uploads/2021/03/harry-rony-hermione-harry-potter.jpg");
+  }
+
+  _imgAss() {
+    return Image.asset(
+      "assets/images/adolescentes_3.jpg",
+      width: 300,
+      height: 300,
+      fit: BoxFit.cover, // fill, contain, cover, fitHeight, fitWidth
     );
   }
 }
